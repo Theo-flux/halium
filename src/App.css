@@ -1,0 +1,78 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.App-main {
+    position: relative;
+    background-color: #0032E3;
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    animation-name: slideIn;
+    animation-duration: .8s;
+    animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@keyframes slideIn {
+    0%{
+      top: -100%;
+    }
+    100% {
+      top: 0px;
+    }
+}
+
+.App-main header{
+  width: 100%;
+  height: 100vh;
+  color: #0032E3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn .8s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    color: #0032E3;
+  }
+
+  100% {
+    color: #EBEBEB;
+  }
+}
+
+.App-main header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 2s;
+}
+
+.App-main header small {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate-reverse;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+}
+
+.App-main header span {
+  font-weight: 400;
+}
+
+
