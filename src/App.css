@@ -6,10 +6,14 @@
     width: 100%;
     height: 100vh;
 }
-
+.App-loader {
+  border: 1px solid magenta;
+  width: 100%;;
+  height: 100vh;
+}
 .App-main {
     position: relative;
-    background-color: #0032E3;
+    background-color: var(--blue);
     width: 100%;
     margin: auto;
     height: 100vh;
@@ -30,7 +34,7 @@
 .App-main header{
   width: 100%;
   height: 100vh;
-  color: #0032E3;
+  color: var(--blue);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,11 +46,11 @@
 
 @keyframes fadeIn {
   0% {
-    color: #0032E3;
+    color: var(--blue);
   }
 
   100% {
-    color: #EBEBEB;
+    color: var(--offWhite);
   }
 }
 

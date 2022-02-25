@@ -6,7 +6,7 @@ import BarLoader from "react-spinners/BarLoader";
 function App() {
 
   const [loading, setLoading] = useState(true)
-  const [color, setColor] = useState('#0032E3')
+  const color = '#0032E3'
   const speed = .5
   useEffect(() => {
     const loader = setTimeout(() => setLoading(false), 5000)
@@ -21,12 +21,15 @@ function App() {
     <div className="App">
       {
         loading ?
+        
           <BarLoader 
             color={color} 
             loading={loading} 
             size={15} 
             speedMultiplier = {speed}
+            className="App-loader"
           />
+        
         :
         <div className="App-main">
           <header>
